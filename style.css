@@ -131,85 +131,80 @@ section {
 /* Application Section Styling */
 .Applications {
     background-color: #000000;
-    height: 100vh; /* Ensure the section takes up full height */
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
+    justify-content: flex-start; 
     align-items: center;
-    padding: 0; /* Remove padding to avoid overflow */
-    overflow: hidden; /* Prevent overflow */
+    padding: 0; 
+    overflow: hidden;
 }
 
-/* Heading Styling */
 .heading {
     font-family: roboto;
     text-align: center;
-    margin: 40px 0; /* Reduced margin to fit within the frame */
+    margin: 40px 0; 
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Make sure the heading takes full width */
+    width: 100%; 
 }
 
 .line-left,
 .line-right {
     border: 0;
-    border-top: 1px solid #f5f5f5; /* Light color for better visibility */
-    width: 20%; /* Adjust line width */
+    border-top: 1px solid #f5f5f5; 
+    width: 20%; 
     margin: 0 10px;
 }
 
-/* Heading text styling */
+
 h2{
     font-size: 36px;
     font-weight: 700;
-    color: #ffffff; /* Light color for text */
+    color: #ffffff; 
 }
 
-
-/* Cards Container Styling */
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-    gap:30px; /* Adjusted gap between cards */
-    width: 80%; /* Make container width responsive */
-    height: 80%; /* Adjust container height to fit within 100vh */
-    justify-items: center; /* Center cards horizontally */
-    align-items: center; /* Center cards vertically */
-    overflow-y: hidden; /* Prevent vertical scroll */
-    margin-top: 50px; /* Added margin to separate from heading */
+    grid-template-columns: repeat(3, 1fr); 
+    gap:30px; 
+    width: 80%; 
+    height: 80%; 
+    justify-items: center; 
+    align-items: center; 
+    overflow-y: hidden; 
+    margin-top: 50px; 
 }
 
-/* Individual Card Styling */
 .card {
     background-color: #000000;
     border-radius: 10px;
     overflow: hidden;
-    width: 100%; /* Ensures it takes up full width in its column */
-    aspect-ratio: 1 / 1; /* Forces the card to be square */
+    width: 100%; 
+    aspect-ratio: 1 / 1;
     transition: transform 0.3s ease;
-    perspective: 1000px; /* Enables 3D effect */
-    max-width: 300px; /* Adjusted max-width to make the cards smaller */
+    perspective: 1000px;
+    max-width: 300px; 
 }
 
 .card-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d; /* Enables 3D flipping */
+    transform-style: preserve-3d; 
     transition: transform 0.6s;
 }
 
 .card:hover .card-inner {
-    transform: rotateY(180deg); /* Flips the card when hovered */
+    transform: rotateY(180deg);
 }
 
-/* Front Side of the Card */
 .card-front, .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Hides the back side when it's flipped */
+    backface-visibility: hidden; 
 }
 
 .card-front img {
@@ -218,7 +213,6 @@ h2{
     object-fit: cover;
 }
 
-/* Back Side of the Card */
 .card-back {
     display: flex;
     justify-content: center;
@@ -226,7 +220,7 @@ h2{
     background-color: #146CC3;
     color: #333;
     text-align: center;
-    transform: rotateY(180deg); /* Initially, the back side is rotated 180 degrees */
+    transform: rotateY(180deg); 
     padding: 20px;
 }
 
@@ -239,13 +233,13 @@ h2{
 /* Responsive Design */
 @media (max-width: 768px) {
     .cards-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 cards per row for medium screens */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 480px) {
     .cards-container {
-        grid-template-columns: 1fr; /* 1 card per row for small screens */
+        grid-template-columns: 1fr; 
     }
 
     .line-left, .line-right {
@@ -253,61 +247,57 @@ h2{
     }
 }
 
-/* Specifications Section */
 .specifications {
     background-color: #ffffff;
-    height: 100vh; /* Ensure the section takes up full height */
+    height: 100vh; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
+    justify-content: flex-start; 
     align-items: center;
-    padding: 0 20px; /* Add side padding for margin */
-    overflow: hidden; /* Prevent overflow */
+    padding: 0 20px; 
+    overflow: hidden; 
 }
 
-/* Heading Styling */
 .heading {
     font-family: roboto;
-    color: #000000; /* Black color for text */
+    color: #000000; 
     text-align: center;
-    margin: 40px 0; /* Reduced margin to fit within the frame */
+    margin: 40px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Make sure the heading takes full width */
+    width: 100%; 
 }
 
 .line-left-specs,
 .line-right-specs {
     border: 0;
-    border-top: 1px solid #000000; /* Black lines */
-    width: 20%; /* Balanced line width */
+    border-top: 1px solid #000000; 
+    width: 20%;
     margin: 0 10px;
 }
 
 .specs{
     font-size: 36px;
     font-weight: 700;
-    color: #000000; /* Light color for text */
+    color: #000000; 
 }
 
-/* Specifications Key-Value Layout */
 .spec-details {
     display: grid;
-    grid-template-columns: 30% 60%; /* Fixed column widths */
-    gap: 10px 30px; /* Add spacing between rows and columns */
-    line-height: 2.5; /* Increased line height for readability */
-    align-items: start; /* Align items to the start of each row */
-    margin-left: 220px; /* Added margin to separate from heading */
+    grid-template-columns: 30% 60%;
+    gap: 10px 30px;
+    line-height: 2.5;
+    align-items: start;
+    margin-left: 220px;
 }
 
-/* Styling for Key Terms */
 .key-terms p,
 .values p {
-    font-size: 28px; /* Matching font size for both key terms and values */
+    font-size: 28px;
     color: black;
-    margin: 0; /* Remove margin for precise alignment */
-    word-wrap: break-word; /* Allow wrapping of long text */
+    margin: 0;
+    word-wrap: break-word;
 }
 
 #extra{
@@ -316,27 +306,24 @@ h2{
     margin-top: 215px;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
     .spec-details {
-        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 }
 
-/* Contact Us Section */
 .contact-us {
-    background-color: #4185CD; /* Background color */
-    color: #ffffff; /* Text color */
+    background-color: #4185CD;
+    color: #ffffff;
     padding: 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: left;
-    flex-grow: 1; /* Allows the section to expand and push footer to the bottom */
+    flex-grow: 1;
 }
 
-/* Heading Styling */
 .contact-us .heading {
     display: flex;
     align-items: center;
@@ -359,10 +346,9 @@ h2{
     margin: 0 5px;
 }
 
-/* Form Styling */
 .contact-form {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns layout */
+    grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
     width: 80%;
     max-width: 1000px;
@@ -403,7 +389,6 @@ h2{
     color: #999999;
 }
 
-/* Checkbox Styling */
 .checkbox-container {
     display: flex;
     align-items: center;
@@ -416,7 +401,25 @@ h2{
     margin: 0;
 }
 
-/* Submit Button Styling */
+.submit-btn {
+    display: block;
+    margin-left: 95%;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 25%;
+}
+
+.submit-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
 .submit-btn {
     display: block;
     margin-left: 95%;
