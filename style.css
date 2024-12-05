@@ -1,0 +1,547 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    height: 100vh;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.Hero {
+    background-image: url('/images/hero.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+.contact-numbers {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: #000000;
+}
+
+.contact-item {
+    margin-right: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-item span {
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contact-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    margin-top: 0px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 90px;
+    margin-left: 50px;
+}
+
+.content h1 {
+    color: #FFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 111.403%;
+    margin-bottom: 10px;
+}
+
+.content p {
+    color: #FFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2.16px;
+}
+
+.btn {
+    display: flex;
+    margin-top: 20px;
+    width: 170px;
+    padding: 14px 14px 14px 14px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    border-radius: 29px;
+}
+.btn img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.btn:hover {
+    background-color: #000000;
+    color: #d5d5d5;
+}
+.btn:hover img {
+    filter: invert(1);
+}
+
+.hero-image {
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Application Section Styling */
+.Applications {
+    background-color: #000000;
+    height: 100vh; /* Ensure the section takes up full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+    padding: 0; /* Remove padding to avoid overflow */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Heading Styling */
+.heading {
+    font-family: roboto;
+    text-align: center;
+    margin: 40px 0; /* Reduced margin to fit within the frame */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Make sure the heading takes full width */
+}
+
+.line-left,
+.line-right {
+    border: 0;
+    border-top: 1px solid #f5f5f5; /* Light color for better visibility */
+    width: 20%; /* Adjust line width */
+    margin: 0 10px;
+}
+
+/* Heading text styling */
+h2{
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff; /* Light color for text */
+}
+
+
+/* Cards Container Styling */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap:30px; /* Adjusted gap between cards */
+    width: 80%; /* Make container width responsive */
+    height: 80%; /* Adjust container height to fit within 100vh */
+    justify-items: center; /* Center cards horizontally */
+    align-items: center; /* Center cards vertically */
+    overflow-y: hidden; /* Prevent vertical scroll */
+    margin-top: 50px; /* Added margin to separate from heading */
+}
+
+/* Individual Card Styling */
+.card {
+    background-color: #000000;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%; /* Ensures it takes up full width in its column */
+    aspect-ratio: 1 / 1; /* Forces the card to be square */
+    transition: transform 0.3s ease;
+    perspective: 1000px; /* Enables 3D effect */
+    max-width: 300px; /* Adjusted max-width to make the cards smaller */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /* Enables 3D flipping */
+    transition: transform 0.6s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Flips the card when hovered */
+}
+
+/* Front Side of the Card */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when it's flipped */
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Back Side of the Card */
+.card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #146CC3;
+    color: #333;
+    text-align: center;
+    transform: rotateY(180deg); /* Initially, the back side is rotated 180 degrees */
+    padding: 20px;
+}
+
+.card-back img {
+    width: 370px;
+    height: 320px;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr; /* 1 card per row for small screens */
+    }
+
+    .line-left, .line-right {
+        width: 20%;
+    }
+}
+
+/* Specifications Section */
+.specifications {
+    background-color: #ffffff;
+    height: 100vh; /* Ensure the section takes up full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+    padding: 0 20px; /* Add side padding for margin */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Heading Styling */
+.heading {
+    font-family: roboto;
+    color: #000000; /* Black color for text */
+    text-align: center;
+    margin: 40px 0; /* Reduced margin to fit within the frame */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Make sure the heading takes full width */
+}
+
+.line-left-specs,
+.line-right-specs {
+    border: 0;
+    border-top: 1px solid #000000; /* Black lines */
+    width: 20%; /* Balanced line width */
+    margin: 0 10px;
+}
+
+.specs{
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000; /* Light color for text */
+}
+
+/* Specifications Key-Value Layout */
+.spec-details {
+    display: grid;
+    grid-template-columns: 30% 60%; /* Fixed column widths */
+    gap: 10px 30px; /* Add spacing between rows and columns */
+    line-height: 2.5; /* Increased line height for readability */
+    align-items: start; /* Align items to the start of each row */
+    margin-left: 220px; /* Added margin to separate from heading */
+}
+
+/* Styling for Key Terms */
+.key-terms p,
+.values p {
+    font-size: 28px; /* Matching font size for both key terms and values */
+    color: black;
+    margin: 0; /* Remove margin for precise alignment */
+    word-wrap: break-word; /* Allow wrapping of long text */
+}
+
+#extra{
+    display: flex;
+    align-items: center;
+    margin-top: 215px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .spec-details {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        gap: 20px;
+    }
+}
+
+/* Contact Us Section */
+.contact-us {
+    background-color: #4185CD; /* Background color */
+    color: #ffffff; /* Text color */
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    flex-grow: 1; /* Allows the section to expand and push footer to the bottom */
+}
+
+/* Heading Styling */
+.contact-us .heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.contact-us .heading h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 5px;
+    color: #ffffff;
+}
+
+.contact-us .line-left,
+.contact-us .line-right {
+    border: 0;
+    border-top: 1px solid #ffffff;
+    width: 20%;
+    margin: 0 5px;
+}
+
+/* Form Styling */
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns layout */
+    grid-gap: 50px;
+    width: 80%;
+    max-width: 1000px;
+    margin-bottom: 30px;
+}
+
+.form-left,
+.form-right {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+    width: 100%;
+}
+
+.contact-form label {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 1px;
+    color: #ffffff;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: #333333;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #999999;
+}
+
+/* Checkbox Styling */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.checkbox-container input {
+    width: auto;
+    margin: 0;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    display: block;
+    margin-left: 95%;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 25%;
+}
+
+.submit-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #5C5C5C;
+    padding: 30px 20px;
+    text-align: center;
+    color: #ffffff;
+    width: 102.15%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.footer-line {
+    border: 0;
+    border-top: 1px solid #ffffff;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1rem;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+    /* background-color: #5C5C5C;
+    padding: 30px 20px;
+    text-align: center;
+    color: #ffffff;
+    width: 102.15%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.footer-line {
+    border: 0;
+    border-top: 1px solid #ffffff;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1rem;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+} */
